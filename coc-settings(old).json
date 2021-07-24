@@ -9,7 +9,7 @@
 			"filetypes": [ 
 				"python" 
 			] 
-		},
+		}, 
 		"ccls": {                                                                     
 			"command": "ccls",                                                          
 			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],                   
