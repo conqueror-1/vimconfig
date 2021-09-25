@@ -19,8 +19,10 @@ function! TermWrapper(command) abort
 endfunction
 
 command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++11 %s && ./a.out', expand('%')))
+command! -nargs=0 CandR call TermWrapper(printf('gcc  %s && ./a.out', expand('%')))
 autocmd FileType cpp nnoremap <leader>fw :CompileAndRun<CR>
 autocmd FileType cpp nnoremap <leader>fn :!g++ -std=c++11 -o %:r % && open -a Terminal './a.out'<CR>
+autocmd FileType c nnoremap <leader>fw :CandR<CR>
 
 "for python
 command! -nargs=0 Interpret call TermWrapper(printf('python3 %s', expand('%') ))
